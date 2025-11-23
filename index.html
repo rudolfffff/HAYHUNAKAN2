@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Հայ-հունական բարեկամություն</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blue-900': '#002147',
+                        'red-600': '#ef3340',
+                        'red-800': '#9a0000',
+                        'orange-600': '#f7941d',
+                        'orange-50': '#fff8f0'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-900 via-red-800 to-orange-600 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <div class="w-6 h-6 bg-blue-900 rounded-sm"></div>
+                    </div>
+                    <h1 class="text-xl font-bold">ՀԱՅ-ՀՈՒՆԱԿԱՆ ԲԱՐԵԿԱՄՈՒԹՅՈՒՆ</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-yellow-300 transition-colors font-medium">ԳԼԽԱՎՈՐ</a>
+                    <a href="#education" class="hover:text-yellow-300 transition-colors font-medium">ԿՐԹՈՒԹՅՈՒՆ ԵՎ ՄՇԱԿՈՒՅԹ</a>
+                    <a href="#history" class="hover:text-yellow-300 transition-colors font-medium">ՊԱՏՄՈՒԹՅՈՒՆ</a>
+                    <a href="#churches" class="hover:text-yellow-300 transition-colors font-medium">ԵԿԵՂԵՑԻՆԵՐ</a>
+                    <a href="#friendship" class="hover:text-yellow-300 transition-colors font-medium">ԲԱՐԵԿԱՄՈՒԹՅՈՒՆ</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="md:hidden mt-4 space-y-3 hidden">
+                <a href="#home" class="block py-2 hover:text-yellow-300 transition-colors">ԳԼԽԱՎՈՐ</a>
+                <a href="#education" class="block py-2 hover:text-yellow-300 transition-colors">ԿՐԹՈՒԹՅՈՒՆ ԵՎ ՄՇԱԿՈՒՅԹ</a>
+                <a href="#history" class="block py-2 hover:text-yellow-300 transition-colors">ՊԱՏՄՈՒԹՅՈՒՆ</a>
+                <a href="#churches" class="block py-2 hover:text-yellow-300 transition-colors">ԵԿԵՂԵՑԻՆԵՐ</a>
+                <a href="#friendship" class="block py-2 hover:text-yellow-300 transition-colors">ԲԱՐԵԿԱՄՈՒԹՅՈՒՆ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-blue-50 via-white to-orange-50 py-20">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxwYXRoIGQ9Ik0wIDBoNHY0MGgtNFoiIGZpbGw9IiMwMDU3YjgiIG9wYWNpdHk9IjAuMDUiLz48cGF0aCBkPSJNMCAwaDR2NDBIMFYweiIgZmlsbD0iI2VmMzM0MCIgb3BhY2l0eT0iMC4wNSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')] opacity-20"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                ՀԱՅ-ՀՈՒՆԱԿԱՆ ԲԱՐԵԿԱՄՈՒԹՅՈՒՆ
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Հազարամյակներ տևած մշակութային կապեր, համագործակցություն և փոխադարձ հարգանք
+            </p>
+            <!-- Project attribution - big, bold, beautiful font -->
+            <div class="mt-8">
+                <h3 class="text-3xl md:text-5xl font-black text-red-600 tracking-wider">
+                    ՆԱԽԱԳԻԾ՝ ԵՊԲՀ ՀԵՐԱՑԻ
+                </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Education and Culture -->
+    <section id="education" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    ԿՐԹԱԿԱՆ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ ՈՒ ՄՇԱԿՈՒԹԱՅԻՆ ԿԵՆՏՐՈՆՆԵՐ ՀԱՅԱՍՏԱՆՈՒՄ
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-red-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-blue-50 p-6 rounded-lg border-t-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">ԿՐԹԱԿԱՆ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Հայաստանի համայնքներում գործում են բազմաթիվ կրթական ծրագրեր, որոնք նպատակ ունեն պահպանել և զարգացնել 
+                        հայկական ու հունական մշակութային ժառանգությունը: Երևանի, Գյումրիի, Վանաձորի և այլ քաղաքների դպրոցներում 
+                        ներդրված են հունարեն լեզվի դասընթացներ, մշակութային ակումբներ և համատեղ նախաձեռնություններ: 
+                        Պետական և ոչ կառավարական կազմակերպությունների համագործակցությամբ իրականացվում են կրթական փոխանակումներ, 
+                        ուսանողական ճամբարներ և մշակութային ֆեստիվալներ:
+                    </p>
+                </div>
+
+                <div class="bg-red-50 p-6 rounded-lg border-t-4 border-red-600">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">ՄՇԱԿՈՒԹԱՅԻՆ ԿԵՆՏՐՈՆՆԵՐ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Հայաստանում գործում են մի շարք մշակութային կենտրոններ, որոնք նվիրված են հայ-հունական համագործակցությանը: 
+                        «Հունաստան» մշակութային կենտրոնը Երևանում ամեն տարի կազմակերպում է հունական մշակույթի շաբաթ, 
+                        որտեղ ներկայացվում են հունական պարեր, երաժշտություն, խոհանոց և ավանդույթներ: 
+                        Նմանատիպ նախաձեռնություններ իրականացվում են նաև Գյումրիում, Վանաձորում և Լոռու մարզում: 
+                        Հայկական կենտրոններ Հունաստանում, ինչպես նաև հունական կազմակերպություններ Հայաստանում 
+                        ակտիվ դեր են խաղում մշակութային կապերի ամրապնդման գործում:
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">ՀԱՅ-ՀՈՒՆԱԿԱՆ ՄՇԱԿՈՒԹԱՅԻՆ ՄԻՋՈՑԱՌՈՒՄՆԵՐ</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/300x200/0057b8/ffffff?text=Արարատ+2023&font=raleway" alt="Միջոցառում 1" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/300x200/ef3340/ffffff?text=Աթենք+2022&font=raleway" alt="Միջոցառում 2" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/300x200/0057b8/ffffff?text=Երևան+Ֆեստիվալ&font=raleway" alt="Միջոցառում 3" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/300x200/f7941d/ffffff?text=Թեսալոնիկի+2023&font=raleway" alt="Միջոցառում 4" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/300x200/0057b8/ffffff?text=Գյումրի+Միջոցառում&font=raleway" alt="Միջոցառում 5" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                    <img src="https://placehold.co/300x200/ef3340/ffffff?text=Կիպրոս+2022&font=raleway" alt="Միջոցառում 6" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: History -->
+    <section id="history" class="py-16 bg-gradient-to-br from-blue-50 to-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    ԻՆՉՊԵՍ ԵՆ ՀՈՒՅՆԵՐԸ ՀԱՅՏՆՎԵԼ ՀԱՅԱՍՏԱՆՈՒՄ
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-orange-600 mx-auto"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <div class="prose prose-lg text-gray-700 leading-relaxed">
+                    <p>
+                        Ք.ծ.հ. 1-ին դարում հայկական արքա Տիգրան Մեծը Կիլիկիայից հունական բնակչության մի մասը տեղափոխեց իր նոր 
+                        մայրաքաղաք Տիգրանակերտ: Այս պատմական իրադարձությունն սկիզբ դրեց հայ-հունական մշտական կապերին:
+                    </p>
+                    
+                    <p>
+                        Սակայն հայաստանյան հույների հիմնական հոսքը տեղի ունեցավ 18-19-րդ դարերում, երբ Պոնտոսի հույները, 
+                        ովքեր բնակվում էին Փոքր Ասիայի հյուսիս-արևելյան շրջաններում, սկսեցին ներգաղթել Հայաստան: Նրանք բերեցին 
+                        իրենց հարուստ մշակութային ժառանգությունը, լեզուն, ավանդույթները և տնտեսական հմտությունները:
+                    </p>
+                    
+                    <p>
+                        Պոնտական հույների լեզուն՝ պոնտերենը, որը հիմնված է հին հունարենի վրա, մինչ օրս պահպանվում է Հայաստանի 
+                        հունական համայնքներում: Այս համայնքները հիմնականում բնակված են Երևանում, Գյումրիում, Վանաձորում և 
+                        Լոռու մարզի որոշ գյուղերում:
+                    </p>
+                    
+                    <p>
+                        Հույները մեծ ներդրում ունեցան Հայաստանի տնտեսական կյանքի մեջ: Նրանք զբաղվում էին առևտրով, արհեստներով, 
+                        գինեգործությամբ և մանր արդյունաբերությամբ: Շատ հույներ նաև մասնակցեցին Հայաստանի ազգային-ազատագրական 
+                        շարժումներին և անկախ Հայաստանի ստեղծման գործում:
+                    </p>
+                    
+                    <p>
+                        Այսօր Հայաստանում հունական համայնքը, չնայած թվաքանակով փոքր լինելուն, ակտիվ դեր է խաղում մշակութային, 
+                        կրթական և սոցիալական կյանքում: Հունաստանի Հանրապետությունը և Հայաստանի Հանրապետությունը պաշտոնապես 
+                        ճանաչում են միմյանց մշակութային ժառանգությունը և աջակցում են համայնքների պահպանմանը:
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Churches -->
+    <section id="churches" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    ՀԱՅԿԱԿԱՆ ԵԿԵՂԵՑԻՆԵՐ ՀՈՒՆԱՍՏԱՆՈՒՄ ԵՎ ՀՈՒՆԱԿԱՆ ԵԿԵՂԵՑԻՆԵՐ ՀԱՅԱՍՏԱՆՈՒՄ
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-red-50 p-6 rounded-lg border-l-4 border-red-600">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">ՀԱՅԿԱԿԱՆ ԵԿԵՂԵՑԻՆԵՐ ՀՈՒՆԱՍՏԱՆՈՒՄ</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Հունաստանում գործում են մի շարք հայկական եկեղեցիներ, որոնք ծառայում են հայ համայնքի հոգևոր կարիքներին: 
+                        Աթենքում գտնվող Սուրբ Գևորգ եկեղեցին հիմնադրվել է 1920-ական թվականներին հայ փախստականների կողմից 
+                        և մինչ օրս հանդիսանում է հայ համայնքի հոգևոր կենտրոնը: Թեսալոնիկիում նույնպես գործում է հայկական 
+                        եկեղեցի, որը սպասարկում է Հունաստանի հյուսիսային շրջանների հայ բնակչությանը:
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Այս եկեղեցիները ոչ միայն հոգևոր կենտրոններ են, այլև մշակութային և կրթական գործունեության օջախներ: 
+                        Դրանք կազմակերպում են հայերենի դասընթացներ, մշակութային միջոցառումներ և համայնքային հանդիպումներ:
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">ՀՈՒՆԱԿԱՆ ԵԿԵՂԵՑԻՆԵՐ ՀԱՅԱՍՏԱՆՈՒՄ</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Հայաստանում հունական եկեղեցիների առկայությունը վկայում է հայ-հունական հարաբերությունների երկար 
+                        պատմության մասին: Երևանում գտնվում է Սուրբ Աստվածածին հունական եկեղեցին, որը սպասարկում է տեղի 
+                        հունական համայնքը: Այս եկեղեցին հիմնադրվել է 19-րդ դարում և ներկայումս գտնվում է վերանորոգման ընթացքում:
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Գյումրիում և Վանաձորում նույնպես եղել են հունական եկեղեցիներ, սակայն ժամանակի ընթացքում դրանք 
+                        կորցրել են իրենց սկզբնական նշանակությունը: Այնուամենայնիվ, հունական համայնքը շարունակում է պահպանել 
+                        իր եկեղեցական ավանդույթները և մասնակցում է քրիստոնեական փոխադարձ հարգանքի արտահայտման միջոցառումներին:
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-600 mb-8">
+                <h3 class="text-xl font-bold text-orange-800 mb-4">ՀԱՅ-ՀՈՒՆԱԿԱՆ ԵԿԵՂԵՑԱԿԱՆ ԿԱՊԵՐ ԵՎ ՀԱՄԱԳՈՐԾԱԿՑՈՒԹՅՈՒՆ</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Հայ Առաքելական Սուրբ Եկեղեցին և Հունաստանի Ուղղափառ Եկեղեցին ունեն խորը եկեղցական կապեր: 
+                    Երկու եկեղեցիների ղեկավարները պարբերաբար հանդիպումներ են ունենում, համատեղ հայտարարություններ են տալիս 
+                    և աջակցում են միմյանց եկեղեցական նախաձեռնություններին: Երկու եկեղեցիներն էլ ընդգծում են քրիստոնեության 
+                   ընդհանուր արժեքները և համագործակցում են խաղաղության, համախմբվածության և մարդասիրության գործում:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://placehold.co/250x200/0057b8/ffffff?text=Սուրբ+Գևորգ&font=raleway" alt="Եկեղեցի 1" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://placehold.co/250x200/ef3340/ffffff?text=Աթենք+Եկեղեցի&font=raleway" alt="Եկեղեցի 2" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://placehold.co/250x200/f7941d/ffffff?text=Սուրբ+Աստվածածին&font=raleway" alt="Եկեղեցի 3" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://placehold.co/250x200/0057b8/ffffff?text=Սալոնիկ+Կաթոլիկոսություն&font=raleway" alt="Եկեղեցի 4" class="w-full h-48 object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Friendship -->
+    <section id="friendship" class="py-16 bg-gradient-to-br from-orange-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    ՀԱՅ-ՀՈՒՆԱԿԱՆ ԲԱՐԵԿԱՄՈՒԹՅՈՒՆ ԵՎ ՀԱՄԱԳՈՐԾԱԿՑՈՒԹՅՈՒՆ
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-orange-600 to-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">ՊԱՏՄԱԿԱՆ ԲԱՐԵԿԱՄՈՒԹՅՈՒՆ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Հայ և հույն ժողովուրդների միջև բարեկամությունն ունի հազարամյակներ տևողությամբ պատմություն: 
+                        Երկու ժողովուրդներն էլ քրիստոնյա են, ունեն ընդհանուր մշակութային արմատներ և նման ազգային ճակատագրեր: 
+                        Պատմության ընթացքում հայերն ու հույները միշտ միմյանց աջակցել են անկախության և ազգային ինքնության պայքարում:
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-red-600">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">ՄՇԱԿՈՒԹԱՅԻՆ ՀԱՄԱԳՈՐԾԱԿՑՈՒԹՅՈՒՆ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Մշակութային համագործակցությունը հայ-հունական հարաբերությունների կարևորագույն բաղադրիչն է: 
+                        Կազմակերպվում են համատեղ մշակութային ֆեստիվալներ, ցուցահանդեսներ, երաժշտական համերգներ 
+                        և թատերական ներկայացումներ: Երևանում և Աթենքում ամեն տարի կայանում են հունական և հայկական մշակույթի շաբաթներ:
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-orange-600">
+                    <h3 class="text-xl font-bold text-orange-800 mb-4">ՏՆՏԵՍԱԿԱՆ ՈՒ ԿՐԹԱԿԱՆ ԾՐԱԳՐԵՐ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Հայաստանն ու Հունաստանը իրականացնում են տնտեսական և կրթական համագործակցության բազմաթիվ ծրագրեր: 
+                        Կազմակերպվում են ուսանողական փոխանակումներ, համատեղ գիտական հետազոտություններ, 
+                        ձեռնարկատիրական ֆորումներ և ներդրումային նախաձեռնություններ: Հատկապես զարգացած է զբոսաշրջության 
+                        և գինեգործության ոլորտներում համագործակցությունը:
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">ՀԱՄԱՏԵՂ ՀԱՄԱՅՆՔԱՅԻՆ ՄԻՋՈՑԱՌՈՒՄՆԵՐ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Հայ և հունական համայնքները Հայաստանում ու Հունաստանում ակտիվորեն կազմակերպում են համատեղ 
+                        միջոցառումներ: Այս միջոցառումների շրջանակներում ներկայացվում են երկու մշակույթների ավանդույթները, 
+                        խոհանոցը, պարերը և երաժշտությունը: Այսպիսի հանդիպումները նպաստում են փոխըմբռնմանը և բարեկամության ամրապնդմանը:
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-red-600 md:col-span-2">
+                    <h3 class="text-xl font-bold text-red-800 mb-4">ՀՈՒՅՆԵՐԻ ԴԵՐԸ ՀԱՅԱՍՏԱՆԻ ՄՇԱԿՈՒՅԹՈՒՄ ԵՎ ՀԱՅԵՐԻ ԴԵՐԸ ՀՈՒՆԱՍՏԱՆՈՒՄ</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Հույները Հայաստանում մեծ ներդրում են ունեցել մշակույթի, արվեստի, գիտության և տնտեսության ոլորտներում: 
+                        Շատ հույներ դարձել են Հայաստանի քաղաքացիներ և նպաստել են երկրի զարգացմանը: Նույն կերպ, հայերը 
+                        Հունաստանում պահպանել են իրենց մշակութային ինքնությունը և նպաստել են հունական հասարակության մշակութային 
+                        բազմազանությանը: Երկու համայնքներն էլ համարվում են մոդելային օրինակ համագործակցության և փոխադարձ հարգանքի համար:
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/300x200/0057b8/ffffff?text=Արարատ+2023&font=raleway" alt="Բարեկամություն 1" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/300x200/ef3340/ffffff?text=Աթենք+2022&font=raleway" alt="Բարեկամություն 2" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://placehold.co/300x200/0057b8/ffffff?text=Երևան+Ֆեստիվալ&font=raleway" alt="Բարեկամություն 3" class="w-full h-64 object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-900 via-red-800 to-orange-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ՀԱՅ-ՀՈՒՆԱԿԱՆ ԲԱՐԵԿԱՄՈՒԹՅՈՒՆ</h3>
+                    <p class="text-blue-100">
+                        Հայաստանի և Հունաստանի միջև մշակութային կապերի ամրապնդման և զարգացման նպատակով ստեղծված կազմակերպություն:
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ԿԱՊ ՄԵԶ ՀԵՏ</h3>
+                    <p class="text-blue-100">Էլ. հասցե՝ rudolfhakobyan178@gmail.com</p>
+                    <p class="text-blue-100">Հեռախոս՝ +374 43214307</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ՀԵՏԵՎԵՔ ՄԵԶ</h3>
+                    <div class="flex space-x-4">
+                        <i class="fab fa-instagram text-xl hover:text-yellow-300 transition-colors cursor-pointer"></i>
+                        <i class="fab fa-facebook text-xl hover:text-yellow-300 transition-colors cursor-pointer"></i>
+                        <i class="fab fa-twitter text-xl hover:text-yellow-300 transition-colors cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-8 pt-8 text-center text-blue-100">
+                <p>&copy;Բոլոր իրավունքները պաշտպանված են:</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
